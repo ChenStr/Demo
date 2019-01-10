@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin : http://10.10.117.106:63341");
+header("Access-Control-Allow-Origin : http://10.30.29.56:63341");
 header("Access-Control-Allow-Credentials : true");
 header('Access-Control-Allow-Headers : Content-Type');
 

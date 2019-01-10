@@ -1,22 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2019/1/7
- * Time: 20:13
- */
-header("Access-Control-Allow-Origin : http://10.10.117.106:63341");
+header("Access-Control-Allow-Origin : http://10.30.29.56:63341");
 header("Access-Control-Allow-Credentials : true");
 header('Access-Control-Allow-Headers : Content-Type');
 $str=file_get_contents('php://input');
-$username=json_decode($str)["username"];
-$password=json_decode($str)["password"];
-if($username=="van" && $password=="van")
+//var_dump($str);
+$username=json_decode($str)->userName;
+$password=json_decode($str)->passWord;
+if($username=="123" && $password=="123")
 {
-    $data=array("message"=>"success");
+    $data=Array("message"=>"success");
 }
 else{
-    $data=array("message"=>"error");
+    $data=Array("message"=>"error");
 }
-return $data;
+echo json_encode($data);
 ?>
